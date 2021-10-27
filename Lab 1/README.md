@@ -6,7 +6,7 @@ Source Files (if you're using GitHub classroom, get them from the invitation lin
 
 * [Lab1.py](Lab1.py)
 * [Lab1_tests_cases.py](Lab1_tests_cases.py)
-* [Location.py](location.py)
+* [Location.py](Location.py)
 * [Location_tests.py](Location_tests.py)
 * [Sample.py](Samples.py)
 * [Sample_test_cases.py](Sample_Test_Cases.py)
