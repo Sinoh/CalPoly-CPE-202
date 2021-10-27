@@ -4,7 +4,7 @@
 
 Source Files (if you're using GitHub classroom, get them from the invitation link):
 
-* [lab1.py](./Lab1.py)
+* [lab1.py](./Lab\ \1.py)
 * [lab1_test_cases.py](./Lab1_test_cases.py)
 * [location.py](./location.py)
 * [location_tests.py](./location_tests.py)
