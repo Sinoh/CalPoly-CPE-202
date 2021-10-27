@@ -1,104 +1,54 @@
-# Lab 1: Python, Recursion, and Testing!
+# Lab 0: Environment, Python, and GitHub!
 
 ## Part 0
 
-Source Files (if you're using GitHub classroom, get them from the invitation link):
+If you do not already have a GitHub account, go to www.github.com to
+create one.  I recommend using your Cal Poly user name, but you may use
+another user name.  Check out (clone) the code in the lab0 repository.
+See the essential Github commands and link to a GitHub tutorial on the
+PolyLearn page.
 
-* [lab1.py](./Lab1.py)
-* [lab1_test_cases.py](./Lab1_test_cases.py)
-* [location.py](./location.py)
-* [location_tests.py](./location_tests.py)
-* [sample.py](./Sample.py)
-* [sample_test_cases.py](./Sample_test_cases.py)
+Once you have created a GitHub account, you must tell us both your
+GitHub account name and your Cal Poly user name by filling out the
+following
+form:[https://docs.google.com/forms/d/e/1FAIpQLSdFd2iazIy04ZRUi2e2Uk5E1hfsfh4cJpy6kTqTUqTNUttN5Q/viewform](https://docs.google.com/forms/d/e/1FAIpQLSdFd2iazIy04ZRUi2e2Uk5E1hfsfh4cJpy6kTqTUqTNUttN5Q/viewform)
 
-
-Review the code in location.py. Note that there is a class definition for a Location class, and an associated __init__ method. In addition, there is code to create Location objects and print information associated with those objects.
-```python
-class Location:
-    def __init__(self, name, lat, long):
-        self.name = name    # string for name of location
-        self.lat = lat      # latitude in degrees (-90 to 90)
-        self.long = long    # longitude in degrees (-180 to 180)
-```
-1. Without modifying the code, run location.py in whatever environment you wish (again, reference the Getting Started document if you need help in doing this)
-1. Note the information that is printed out for each Location object – you should see something like this:
-Location 1: <__main__.Location object at 0x000001F6A2E0C7B8>
-1. Since we haven’t provided any specific method to provide a representation for the class, Python uses a default method. What do you notice about the information for loc1 and loc4 ?
-1. Also note the result of the equal comparisons between the locations, in particular loc1==loc3 and loc1==loc4. Make sure you understand why the results are what they are.
-1. Now modify the location.py code, adding in the methods (__eq__() and __repr__()).  See the location_tests.py to figure out what the repr method should look like.
-1. Run the location.py code with the modifications made above.
-1. Now review the information printed out for each location. The __repr__ method of Location is now being used when printing the object.
-1. Examine the results of the equal comparisons. How are they different from before the __eq__ method is added?
-
- 
 ## Part 1
 
-1. In the lab1.py file, complete the iterative function to find the maximum integer in a list of integers. 
+In the plantets.py file, add code to implement the functionality shown by the following sample run:
 
-```python
-def max_list_iter(int_list):  # must use iteration not recursion
-   """finds the max of a list of numbers and returns the value (not the index)
-   If int_list is empty, returns None. If list is None, raises ValueError"""
+#### Sample Run:
+
+```
+What do you weigh on earth? 136
+
+On Mars you would weigh 51.68 pounds.
+On Jupiter you would weigh 318.24 pounds.
 ```
 
-1. In the lab1.py file, complete the recursive function to reverse a list of integers:
+#### Important Information and Requirements:
 
-```python
-def reverse_rec(int_list):   # must use recursion
-   """recursively reverses a list of numbers and returns the reversed list
-   If list is None, raises ValueError"""
-```
+- To calculate a person&#39;s weight on Mars, multiply their weight on
+  earth by 0.38.
+- To calculate a person&#39;s weight on Jupiter, multiply their weight
+  on earth by 2.34.
+- Your output must match my sample output exactly. Make sure there is a
+  blank line in between prompting for the user&#39;s weight and
+  displaying the results.
+- Your program may use a &quot;cast&quot; only one time. Ask me if you
+  don&#39;t know what this means.
+- Your program may only use the print function once.
+- Run the unit tests in planets_tests.py to check your solution!
 
-1. In the lab1.py file, complete the recursive function to search a list of integers using binary search along with test cases. If the target of the search is in the list, the function returns its index. 
+### Submission/Grading
 
-```python
-def bin_search(target, low, high, int_list):  # must use recursion
-   """searches for target in int_list[low..high] and returns index if found
-   If target is not found returns None. If list is None, raises ValueError """
-```
+Make sure that the code that you want to be graded has been committed
+*and pushed* to GitHub.  Failure to do so will result in receiving no
+credit for the lab.  Not sure if you code has been pushed to GitHub?
+Use a web browser, go to you GitHub account and check!  Once your
+assignment has been graded, feedback will be automatically emailed to
+you.
 
-## Test Cases
-
-Many people tend to focus on writing code as the singular activity of a
-programmer, but testing is one of the most important tasks that one can
-perform while programming. Proper testing provides a degree of
-confidence in your solution. Systematic testing helps you to discover
-and then debug your code. Writing high quality test cases can greatly
-simplify the tasks of both finding and fixing bugs and, as such, will
-save you time during development.  However, testing does not guarantee
-that your program is correct.
-
-For this part of the lab you will practice writing some simple test
-cases to gain experience with the unittest framework. I recommend
-watching the first 20 minutes or so of the following video if you need
-more guidance on testing in Python.
-
-https://www.youtube.com/watch?v=6tNS--WetLI
-
-Using your editor/IDE of choice, open the lab1_test_cases.py file. This
-file defines, using code that we will treat as a boilerplate for now, a
-testing class with a single testing function.  In the test_expressions
-function you will see some test cases already provided. You must add
-additional test cases to verify that your functions (max_list_iter,
-reverse_rec, bin_search) are correct.   
-
-## Submission/Grading
-
-Ensure that the following file have been pushed to GitHub by the due date:
-
-* location.py
-  * The location class with __eq__ and __repr__ methods added.
-
-* location_tests.py
-  * Unit tests for the location class.  You do not have to worry about testing the code inside of the main function in location.
-
-* lab1.py
-  * Correct and well documented iterative max_list_iter, recursive reverse_rec, and recursive bin_search functions based on the template provided  
-
-* lab1_test_cases.py
-  * A complete set of test cases for the functions above. Your test cases should test boundary conditions and other possible errors based on the structure of your program.  For each test provide a comment (docstring) that explains what it is testing.  Your tests cases will be tested with known incorrect (buggy) versions of the functions in lab1.py and will also be tested for 100% code coverage. 
-
- 
 ## For folks new to Python or who need review
 
 ### The basic Python Tutorial
@@ -197,7 +147,7 @@ previously.
 Start the interpreter in interactive mode by typing `python` at the
 command prompt. You should now see something like the following.
 
-```python
+```
 Python 3.6.0 (v3.6.0:41df79263a11, Dec 23 2016, 07:18:10) [MSC v.1900 32 bit (Intel)] on win32
 
 
