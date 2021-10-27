@@ -5,11 +5,11 @@
 Source Files (if you're using GitHub classroom, get them from the invitation link):
 
 * [Lab1.py](Lab1.py)
-* [Lab1_test_cases.py](Lab1_test_cases.py)
-* [location.py](location.py)
-* [location_tests.py](location_tests.py)
-* [Sample.py](Sample.py)
-* [Sample_test_cases.py](Sample_test_cases.py)
+* [Lab1_tests_cases.py](Lab1_tests_cases.py)
+* [Location.py](location.py)
+* [Location_tests.py](Location_tests.py)
+* [Sample.py](Samples.py)
+* [Sample_test_cases.py](Sample_Test_Cases.py)
 
 
 Review the code in location.py. Note that there is a class definition for a Location class, and an associated __init__ method. In addition, there is code to create Location objects and print information associated with those objects.

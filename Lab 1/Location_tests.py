@@ -1,5 +1,5 @@
 import unittest
-from location import *
+from Location import *
 
 class TestLab1(unittest.TestCase):
 
